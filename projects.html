@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Core Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/transitions.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="images/logo.png">
+</head>
+<body class="light-theme">
+    <div class="transition transition-1 is-active"></div>
+    
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Core Store Logo" class="logo">
+            <h1>Core Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="chat.html" class="nav-link">Community Chat</a></li>
+                <li><a href="settings.html" class="nav-link">Settings</a></li>
+                <li><a href="#" id="auth-button" class="auth-btn">Sign In with Google</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-header">
+            <h2>All Projects</h2>
+            <div class="search-filter">
+                <input type="text" id="project-search" placeholder="Search projects...">
+                <select id="project-filter">
+                    <option value="all">All Categories</option>
+                    <option value="game">Games</option>
+                    <option value="server">Servers</option>
+                    <option value="tool">Tools</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="all-projects">
+            <div class="projects-grid" id="all-projects">
+                <!-- Projects will be loaded from Firebase -->
+            </div>
+        </section>
+
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-project-details"></div>
+                <div class="reviews-section">
+                    <h3>Reviews</h3>
+                    <div id="project-reviews"></div>
+                    <div id="add-review-section" class="hidden">
+                        <h4>Add Your Review</h4>
+                        <div class="star-rating">
+                            <span class="star" data-value="1"><i class="far fa-star"></i></span>
+                            <span class="star" data-value="2"><i class="far fa-star"></i></span>
+                            <span class="star" data-value="3"><i class="far fa-star"></i></span>
+                            <span class="star" data-value="4"><i class="far fa-star"></i></span>
+                            <span class="star" data-value="5"><i class="far fa-star"></i></span>
+                        </div>
+                        <button id="submit-review" class="btn">Submit Review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://youtube.com/yourchannel" target="_blank"><img src="images/social/youtube.png" alt="YouTube"></a>
+            <a href="https://t.me/yourtelegram1" target="_blank"><img src="images/social/telegram.png" alt="Telegram 1"></a>
+            <a href="https://t.me/yourtelegram2" target="_blank"><img src="images/social/telegram.png" alt="Telegram 2"></a>
+        </div>
+        <div class="credits">
+            <p>Created by <span class="highlight">scprondation</span> | Developed with ❤️ by DeepSeek Chat</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/reviews.js"></script>
+</body>
+</html>
